@@ -1,26 +1,76 @@
-WhatsApp Chat Analyzer
+# 📱 WhatsApp Chat Analyzer
 
-A simple end-to-end WhatsApp Chat Analyzer built with Python and Streamlit. The project takes an exported WhatsApp chat and converts it into meaningful statistics and visual insights about the conversation.
+A Python-based WhatsApp Chat Analyzer that converts exported WhatsApp chats into meaningful statistics and visual insights using Pandas, Matplotlib, Seaborn, WordCloud and Streamlit.
 
-Features
-Total messages, words, media and links shared
-Monthly and daily messaging timelines
-Most active users in the group
-Busiest days and months
-Weekly activity heatmap
-Most commonly used words
-Word cloud of frequently used words
-Emoji usage analysis
+## 🚀 Features
 
-How It Works?
+- **Overall Statistics**
+  - Total messages
+  - Total words
+  - Total media shared
+  - Total links shared
 
-The project is divided into three main modules:
+- **User Analysis**
+  - Most active users
+  - Individual user analysis
+  - Percentage contribution of each user
 
-preprocessor.py
-Parses the raw WhatsApp .txt file, separates users and messages, converts timestamps, and creates useful date/time features.
+- **Timeline Analysis**
+  - Monthly messaging timeline
+  - Daily messaging timeline
 
-helper.py
-Contains the analysis functions used to calculate statistics, user activity, word frequencies, emojis, timelines and other insights.
+- **Activity Analysis**
+  - Most active days of the week
+  - Most active months
+  - Weekly activity heatmap
+  - Hour-wise messaging patterns
 
-app.py
-Handles the Streamlit interface, user selection and visualization of the analysis results.
+- **Text Analysis**
+  - Most commonly used words
+  - Word cloud visualization
+
+- **Emoji Analysis**
+  - Most frequently used emojis
+  - Emoji frequency visualization
+
+## 🛠️ Tech Stack
+
+- Python
+- Pandas
+- Streamlit
+- Matplotlib
+- Seaborn
+- Regex
+- WordCloud
+- URLExtract
+
+## ⚙️ Project Workflow
+
+1. Upload an exported WhatsApp `.txt` chat.
+2. Read and decode the uploaded file.
+3. Use Regex to identify timestamps and messages.
+4. Separate the date, time, user and message.
+5. Convert the raw data into a Pandas DataFrame.
+6. Create additional features such as:
+   - Year
+   - Month
+   - Day
+   - Day name
+   - Hour
+   - Time period
+7. Pass the processed DataFrame to the analysis functions.
+8. Calculate messaging statistics and user activity.
+9. Generate visualizations using Matplotlib, Seaborn and WordCloud.
+10. Display the results through an interactive Streamlit dashboard.
+
+## 📂 Project Structure
+
+```text
+whatsapp-chat-analyzer/
+│
+├── app.py                  # Streamlit application
+├── preprocessor.py         # Data cleaning and preprocessing
+├── helper.py               # Analysis functions
+├── stop_hinglish.txt       # Stop words
+├── requirements.txt        # Project dependencies
+└── README.md               # Project documentation
