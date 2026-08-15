@@ -1,21 +1,26 @@
 WhatsApp Chat Analyzer
 
-A simple Streamlit-based WhatsApp Chat Analyzer that turns an exported WhatsApp chat into useful insights and visualizations.
+A simple end-to-end WhatsApp Chat Analyzer built with Python and Streamlit. The project takes an exported WhatsApp chat and converts it into meaningful statistics and visual insights about the conversation.
 
-What it does
-📊 Shows total messages, words, media and links shared
-📈 Analyzes monthly and daily messaging activity
-👥 Finds the most active users
-📅 Shows the busiest days and months
-🔥 Creates a weekly activity heatmap
-☁️ Generates a word cloud
-🔤 Finds the most commonly used words
-😂 Analyzes emoji usage
+Features
+Total messages, words, media and links shared
+Monthly and daily messaging timelines
+Most active users in the group
+Busiest days and months
+Weekly activity heatmap
+Most commonly used words
+Word cloud of frequently used words
+Emoji usage analysis
 
-How it works?
+How It Works?
 
-The project is split into three main parts:
+The project is divided into three main modules:
 
-preprocessor.py – cleans the raw WhatsApp chat and converts it into a structured Pandas DataFrame.
-helper.py – performs the actual analysis on the DataFrame.
-app.py – handles the Streamlit interface and displays the results as charts and tables.
+preprocessor.py
+Parses the raw WhatsApp .txt file, separates users and messages, converts timestamps, and creates useful date/time features.
+
+helper.py
+Contains the analysis functions used to calculate statistics, user activity, word frequencies, emojis, timelines and other insights.
+
+app.py
+Handles the Streamlit interface, user selection and visualization of the analysis results.
